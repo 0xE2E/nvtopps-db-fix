@@ -81,7 +81,10 @@ Test system: RTX 5080 Laptop GPU, Windows 11, driver 621.35, `C:` on an NVMe SSD
 | SSD-level check | 104 MB written by the disk per 2 s during a burst | no bursts |
 | NvTopps / Dynamic Boost | running | running, full 175 W under load |
 
-Long idle (8 h) result: *pending*.
+**Overnight check (12.5 h after `-Fix`):** NVDisplay.Container wrote 278 MB in total
+(~0.02 GB/hour, busiest minute 4.9 MB), against ~11 GB/hour in the 18 minutes before the fix.
+`nvtopps.db3` was 172 KB the next morning and did not re-bloat. NvTopps stayed running the
+whole time.
 
 If you try it, please open an issue with your GPU, driver version, and the `-Check` output from
 before and after. Laptop and desktop results are both useful.
